@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sendmail -oi -t << EOF
+From: <%= node['nut']['notify']['email']["from"] %>
+To: <%= node['nut']['notify']['email']["to"] %>
+Subject: $UPSNAME incident
+$UPSNAME is $NOTIFYTYPE
+
+$NOTIFYMSG
+EOF

@@ -133,6 +133,8 @@ default['nut']['shutdown_command'] = "/sbin/shutdown -h +0"
 # Making this some sort of shell script might not be a bad idea.  For more
 # information and ideas, see pager.txt in the docs directory.
 default['nut']['notify_command'] = nil
+default['nut']['notify']["email"]["to"] = nil
+default['nut']['notify']["email"]["from"] = nil
 
 # Polling frequency for normal activities, measured in seconds.
 #
